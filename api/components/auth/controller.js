@@ -1,6 +1,8 @@
 const { sign } = require('../../../auth');
 const bcrypt = require('bcrypt');
 
+const {error} = require("./../../../utils/error");
+
 const TABLA = 'auth'
 
 controler = (injectedStore) => {
@@ -20,7 +22,7 @@ controler = (injectedStore) => {
                     // Generar token
                     return sign(data)
                 } else {
-                    throw new Error('Informacion invalida')
+                    throw error('No puedes hacer esto', 401);
                 }
             })
     }
