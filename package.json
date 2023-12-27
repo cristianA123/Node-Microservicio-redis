@@ -8,6 +8,7 @@
     "jsonwebtoken": "^9.0.2",
     "mysql2": "^3.6.5",
     "nanoid": "^5.0.4",
+    "redis": "^4.6.12",
     "swagger-ui-express": "^5.0.0",
     "uuid": "^9.0.1"
   },
