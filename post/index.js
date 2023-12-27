@@ -1,13 +1,14 @@
 const express = require('express');
-const bodyParser = require('body-parser');
+
 
 const config = require('../config.js');
 const post = require('./components/post/network');
-const errors = require('../network/errors');
+// const errors = require('../../network/errors');
+const {errors} = require('../network/erros');
 
 const app = express();
 
-app.use(bodyParser.json());
+app.use(express.json())
 
 // ROUTER
 app.use('/api/post', post);
